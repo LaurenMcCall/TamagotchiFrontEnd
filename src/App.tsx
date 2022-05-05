@@ -6,7 +6,7 @@ import { Landing } from './pages/Landing'
 export type PetType = {
   id: number
   name: string
-  birthday: string
+  birthday: string | number
   hungerLevel: number
   happinessLevel: number
   lastInteractedWithDate: string

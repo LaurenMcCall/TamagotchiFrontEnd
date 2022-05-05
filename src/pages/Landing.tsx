@@ -18,6 +18,11 @@ export function Landing() {
         console.log(response.data)
       }
     }
+
+    // const sortPets = [...data].sort((a, b) => {
+    //   return a.birthday - b.birthday
+    // })
+
     fetchPetList()
   }
   useEffect(getPetList, [])
@@ -26,16 +31,20 @@ export function Landing() {
   return (
     <div>
       <article>
-        {pets.map((pets) => {
-          return (
-            <ul key={pets.id}>
-              <li>Name: {pets.name}</li>
-              <li>Birthday: {new Date(pets.birthday).toLocaleDateString()}</li>
-              <li>Hunger Level: {pets.hungerLevel}</li>
-              <li>Happiness Level: {pets.happinessLevel}</li>
-            </ul>
-          )
-        })}
+        {pets
+          .sort((a, b) => (a.birthday < b.birthday ? 1 : 0))
+          .map((pets) => {
+            return (
+              <ul key={pets.id}>
+                <li>Name: {pets.name}</li>
+                <li>
+                  Birthday: {new Date(pets.birthday).toLocaleDateString()}
+                </li>
+                <li>Hunger Level: {pets.hungerLevel}</li>
+                <li>Happiness Level: {pets.happinessLevel}</li>
+              </ul>
+            )
+          })}
       </article>
     </div>
   )
