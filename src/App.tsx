@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route, Routes } from 'react-router'
+import { Link } from 'react-router-dom'
 import { Landing } from './pages/Landing'
 
 export type PetType = {
@@ -15,7 +16,9 @@ export type PetType = {
 export function App() {
   return (
     <div>
-      <header>Welcome!</header>
+      <Link to="/">
+        <header>💖 Tamagotchi World 💖</header>
+      </Link>
       <main>
         <Routes>
           <Route path="/" element={<Landing />}></Route>
