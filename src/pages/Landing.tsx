@@ -2,11 +2,9 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { PetType } from '../App'
 
-// The home page should show a list of all the
-// pets in your API. The listing should include their name,
-// birthday, hunger level, and happiness level.
 export function Landing() {
   const [pets, setPets] = useState<PetType[]>([])
+  const [newPetName, setNewPetName] = useState('')
 
   function getPetList() {
     async function fetchPetList() {
@@ -18,18 +16,44 @@ export function Landing() {
         console.log(response.data)
       }
     }
-
-    // const sortPets = [...data].sort((a, b) => {
-    //   return a.birthday - b.birthday
-    // })
-
     fetchPetList()
   }
+
+  async function handleCreateNewPet() {
+    const response = await axios.post(
+      'https://tamagotchilmccall.herokuapp.com/api/pets',
+      { name: newPetName }
+    )
+
+    if (response.status === 201) {
+      getPetList()
+      setNewPetName('')
+    }
+  }
+
   useEffect(getPetList, [])
-  // console.log(getPetList)
 
   return (
     <div>
+      <div className="form">
+        Add a new pet:
+        <form
+          onSubmit={function (event) {
+            event.preventDefault()
+
+            handleCreateNewPet()
+          }}
+        >
+          <input
+            type="text"
+            placeholder="Enter your new pet's name"
+            value={newPetName}
+            onChange={function (event) {
+              setNewPetName(event.target.value)
+            }}
+          />
+        </form>
+      </div>
       <article>
         {pets
           .sort((a, b) => (a.birthday < b.birthday ? 1 : 0))

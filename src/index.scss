@@ -51,7 +51,15 @@ a {
   cursor: pointer;
   text-decoration: none;
 }
-
 a:visited {
   color: currentColor;
+}
+
+.form {
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+form {
+  margin-top: 3px;
 }
