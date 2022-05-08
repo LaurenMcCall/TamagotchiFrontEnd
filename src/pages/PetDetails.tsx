@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router'
+import { Link } from 'react-router-dom'
 // import { Link } from 'react-router-dom'
 import { PetType } from '../App'
 
@@ -113,6 +114,11 @@ export function PetDetails() {
   return (
     <div>
       <p className="petDetails-name">✨ {petDetails.name} ✨</p>
+      <div>
+        <Link to="/">
+          <a className="fa-solid fa-house home-icon" href=""></a>
+        </Link>
+      </div>
       <article>
         <ul className="petDetails text-details">
           <li className="petDetails">

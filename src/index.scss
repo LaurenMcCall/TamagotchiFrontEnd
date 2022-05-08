@@ -15,6 +15,7 @@ body {
   background-image: url(/src/images/tamagotchi.jpeg);
   background-size: 600px;
   background-position: center;
+  overflow-x: hidden;
 }
 
 header {
@@ -85,7 +86,16 @@ a {
 }
 
 a:visited {
-  color: currentColor;
+  color: rgb(140, 59, 5);
+}
+
+.home-icon {
+  color: rgb(140, 59, 5);
+  padding-left: 10px;
+  font-size: 30px;
+  margin-top: 5px;
+  position: fixed;
+  text-shadow: 1px 2px rgb(36, 246, 200);
 }
 
 .form {
@@ -160,4 +170,27 @@ button {
 }
 .button:hover {
   background-color: rgb(249, 191, 152);
+}
+
+// footer {
+//   display: flex;
+// }
+.footer {
+  display: flex;
+  justify-content: center;
+  // margin-bottom: 8px;
+  // margin-top: -10px;
+  // padding-top: 9px;
+  // padding-bottom: 9px;
+  padding: 10px 10px 10px 10px;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  border-bottom: 2px solid rgb(243, 162, 213);
+  border-top: 2px solid rgb(243, 162, 213);
+  background-color: rgb(249, 191, 152);
+  font-weight: 900;
+  font-size: 18px;
+  color: rgb(36, 246, 200);
+  text-shadow: 1.5px 1.5px rgb(140, 59, 5);
 }

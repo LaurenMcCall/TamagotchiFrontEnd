@@ -27,6 +27,9 @@ export function App() {
           <Route path="*" element={'That URL is unknown'} />
         </Routes>
       </main>
+      <a href="https://github.com/LaurenMcCall/TamagotchiFrontEnd">
+        <footer className="footer">Built by Lauren McCall</footer>
+      </a>
     </div>
   )
 }
