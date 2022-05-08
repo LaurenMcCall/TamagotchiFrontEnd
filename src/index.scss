@@ -28,11 +28,10 @@ header {
   text-shadow: 2px 2px rgb(36, 246, 200);
   background-image: linear-gradient(
     to bottom right,
-    rgb(239, 104, 13),
+    rgb(242, 155, 97),
     rgb(36, 246, 200)
   );
   box-shadow: 0 1px 3px rgb(127, 6, 167);
-
   width: 100%;
   margin-top: 0;
 }
@@ -51,9 +50,10 @@ ul {
   display: flex;
   float: left;
   flex-direction: column;
-  border: 2px solid rgb(239, 104, 13);
+  border: 2px solid rgb(242, 155, 97);
   background-color: rgb(243, 162, 213);
-  box-shadow: 10px 5px 5px rgb(36, 246, 200);
+  // box-shadow: 10px 5px 5px rgb(36, 246, 200);
+  box-shadow: 5px 4px 1px rgb(36, 246, 200), -0.2em 0 0.4em rgb(242, 155, 97);
 }
 
 li {
@@ -82,7 +82,7 @@ a:visited {
   padding-bottom: 5px;
   border-bottom: 2px solid rgb(243, 162, 213);
   border-top: 2px solid rgb(243, 162, 213);
-  background-color: rgb(239, 104, 13);
+  background-color: rgb(242, 155, 97);
   font-weight: 900;
   font-size: 22px;
   color: rgb(36, 246, 200);
