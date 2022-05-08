@@ -60,12 +60,16 @@ export function Landing() {
           .map((pets) => {
             return (
               <ul key={pets.id}>
-                <li>Name: {pets.name}</li>
-                <li>
+                <li className="name-text">{pets.name}</li>
+                <li className="text-details">
                   Birthday: {new Date(pets.birthday).toLocaleDateString()}
                 </li>
-                <li>Hunger Level: {pets.hungerLevel}</li>
-                <li>Happiness Level: {pets.happinessLevel}</li>
+                <li className="text-details">
+                  Hunger Level: {pets.hungerLevel}
+                </li>
+                <li className="text-details">
+                  Happiness Level: {pets.happinessLevel}
+                </li>
               </ul>
             )
           })}

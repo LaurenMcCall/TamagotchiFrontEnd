@@ -18,13 +18,14 @@ body {
 }
 
 header {
-  font-size: 25px;
+  font-size: 36px;
   text-align: center;
   padding-top: 15px;
   padding-bottom: 10px;
   margin-bottom: 10px;
   font-family: 'Shrikhand', cursive;
   color: rgb(197, 6, 117);
+  text-shadow: 2px 2px rgb(36, 246, 200);
   background-image: linear-gradient(
     to bottom right,
     rgb(239, 104, 13),
@@ -52,6 +53,7 @@ ul {
   flex-direction: column;
   border: 2px solid rgb(239, 104, 13);
   background-color: rgb(243, 162, 213);
+  box-shadow: 10px 5px 5px rgb(36, 246, 200);
 }
 
 li {
@@ -67,6 +69,7 @@ a {
   cursor: pointer;
   text-decoration: none;
 }
+
 a:visited {
   color: currentColor;
 }
@@ -80,8 +83,30 @@ a:visited {
   border-bottom: 2px solid rgb(243, 162, 213);
   border-top: 2px solid rgb(243, 162, 213);
   background-color: rgb(239, 104, 13);
+  font-weight: 900;
+  font-size: 22px;
+  color: rgb(36, 246, 200);
+  text-shadow: 2px 2px rgb(140, 59, 5);
 }
 
 form {
   margin-top: 3px;
+}
+
+input {
+  border: 3px solid rgb(197, 6, 117);
+  border-radius: 6px;
+}
+
+.name-text {
+  text-transform: uppercase;
+  // QUESTION: why not aligning center?
+  text-align: center;
+  font-weight: 900;
+  color: rgb(197, 6, 117);
+  text-shadow: 0.7px 0.5px rgb(140, 59, 5);
+}
+
+.text-details {
+  color: rgb(140, 59, 5);
 }
