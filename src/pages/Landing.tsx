@@ -1,10 +1,14 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { Link, useParams } from 'react-router-dom'
 import { PetType } from '../App'
 
 export function Landing() {
   const [pets, setPets] = useState<PetType[]>([])
   const [newPetName, setNewPetName] = useState('')
+
+  const params = useParams<{ id: string }>()
+  console.log(params)
 
   function getPetList() {
     async function fetchPetList() {
@@ -60,7 +64,9 @@ export function Landing() {
           .map((pets) => {
             return (
               <ul key={pets.id}>
-                <li className="name-text">{pets.name}</li>
+                <Link to={`/${pets.id}`}>
+                  <li className="name-text">{pets.name}</li>
+                </Link>
                 <li className="text-details">
                   Birthday: {new Date(pets.birthday).toLocaleDateString()}
                 </li>
