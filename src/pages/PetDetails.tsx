@@ -2,7 +2,6 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router'
 import { Link } from 'react-router-dom'
-// import { Link } from 'react-router-dom'
 import { PetType } from '../App'
 
 export function PetDetails() {
