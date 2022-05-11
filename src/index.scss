@@ -25,7 +25,6 @@ header {
   padding-bottom: 10px;
   padding-left: 4px;
   padding-right: 4px;
-  margin-bottom: 10px;
   font-family: 'Shrikhand', cursive;
   color: rgb(197, 6, 117);
   text-shadow: 2px 2px rgb(36, 246, 200);
@@ -43,6 +42,7 @@ article {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  margin-bottom: 50px;
 }
 
 ul {
@@ -101,7 +101,6 @@ a:visited {
 .form {
   text-align: center;
   margin-bottom: 6px;
-  margin-top: -10px;
   padding-top: 9px;
   padding-bottom: 5px;
   border-bottom: 2px solid rgb(243, 162, 213);
